@@ -1,0 +1,15 @@
+service: forfait-mobile
+
+frameworkVersion: '3'
+
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  checkOffers:
+    handler: handler.checkOffers
+    events:
+      - schedule: rate(2 days)
+
