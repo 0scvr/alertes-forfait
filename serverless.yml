@@ -5,7 +5,10 @@ useDotenv: true
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  region: eu-west-3
+  runtime: nodejs16.x
+  disableRollback: true
+  versionFunctions: false
   environment:
     PUSHED_APP_KEY: ${env:PUSHED_APP_KEY}
     PUSHED_APP_SECRET: ${env:PUSHED_APP_SECRET}

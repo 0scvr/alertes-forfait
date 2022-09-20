@@ -9,10 +9,11 @@ module.exports.checkOffers = async (event, context) => {
     orderby: "score",
     order: "DESC",
     offset: "0",
-    "range-price": "0;20",
+    "range-price": "0;12",
     "range-call": "630;630",
-    "range-data": "212;350",
-    "commitment[]": "0"
+    "range-data": "20;350",
+    "commitment[]": "0",
+    "carrier[]": "3368",
   });
 
   const bestOffer = await checkAvailableOffers(params);
