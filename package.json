@@ -1,11 +1,12 @@
 {
   "name": "forfait-mobile",
   "version": "1.0.0",
-  "description": "Example of creating a function that runs as a cron job using the serverless `schedule` event",
+  "description": "",
   "private": "true",
   "author": "devstra",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.12"
   }
 }

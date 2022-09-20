@@ -1,15 +1,18 @@
 service: forfait-mobile
 
 frameworkVersion: '3'
-
+useDotenv: true
 
 provider:
   name: aws
   runtime: nodejs14.x
+  environment:
+    PUSHED_APP_KEY: ${env:PUSHED_APP_KEY}
+    PUSHED_APP_SECRET: ${env:PUSHED_APP_SECRET}
 
 functions:
   checkOffers:
     handler: handler.checkOffers
     events:
-      - schedule: rate(2 days)
+      - schedule: rate(3 days)
 
