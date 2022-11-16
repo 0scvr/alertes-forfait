@@ -1,4 +1,4 @@
 node_modules
 .serverless
 .env
-.deploy.zsh
+deploy.zsh

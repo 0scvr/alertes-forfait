@@ -1,10 +1,7 @@
 # Alertes Forfait
 
-Alertes Forfait est un script qui trouver automatiquement les meilleures offres de forfait mobile disponibles en France selon des critères choisis. Le script a conçu pour être déployé sous forme de fonction sur AWS Lambda et s'éxecute automatiquement tous les 3 jours par défaut (modifiable dans `serverless.yml`).
+Alertes Forfait est un projet qui permet de trouver automatiquement et périodiquement les meilleures offres de forfait mobile disponibles en France selon des critères choisis. Le script a été conçu pour être déployé sous forme de fonction lambda sur AWS Lambda et s'exécute automatiquement tous les 3 jours par défaut (modifiable dans `serverless.yml`) mais il peut facilement être modifié pour être déployé ailleurs.
 
-<p align="center">
-<img src="push.jpeg" alt="push notification - alertes forfait in action" height="600px"/>
-</p>
 
 ## Utilisation
 
@@ -17,8 +14,8 @@ npm install -g serverless
 npm install
 ```
 
-2. Créer un compte Pushed.co et suivre [les instructions](https://pushed.co/quick-start-guide) pour setup les notifications poussés.
-3. Créer un fichier `.env` en suivant le modèle `.env.example` et mettez-y vos informations Pushed.co.
+2. Créer un bot sur Telegram en suivant [ces instructions](https://core.telegram.org/bots#how-do-i-create-a-bot) (pour les notifications poussées).
+3. Créer un fichier `.env` en suivant le modèle `.env.example` et mettez-y le token de votre bot Telegram et votre ID du chat initié avec le bot.
 4. Changer les critères de recherche souhaités en suivant ce [TUTO](./HOW-TO.md).
 
 ### Déployer la fonction lambda sur AWS
@@ -36,8 +33,3 @@ serverless deploy
 ```
 serverless invoke local --function checkOffers
 ```
-
-## Contributions
-
-J'ai développé ce script assez rapidement pour mon usage personnel. Il y a donc sûrement beaucoup d'améliorations et d'options supplémentaire possibles alors j'encourage toute contribution ou report de bug.
-

@@ -10,8 +10,8 @@ provider:
   disableRollback: true
   versionFunctions: false
   environment:
-    PUSHED_APP_KEY: ${env:PUSHED_APP_KEY}
-    PUSHED_APP_SECRET: ${env:PUSHED_APP_SECRET}
+    TELEGRAM_BOT_TOKEN: ${env:TELEGRAM_BOT_TOKEN}
+    TELEGRAM_CHAT_ID: ${env:TELEGRAM_CHAT_ID}
 
 functions:
   checkOffers:
